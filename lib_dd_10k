@@ -1,4 +1,4 @@
-// mechanics.ks - Orbital mechanics routines.
+// lib_dd_10k - Landing routines.
 // Copyright © 2015 jacob berkman
 // Portions (c) the KSLib team
 // This file is distributed under the terms of the MIT license.
@@ -26,26 +26,4 @@ function compassForVec {
   } else {
     return result.
   }
-}
-
-function pitchForVec {
-  parameter ves.
-  parameter vec.
-  return 90 - vang(ves:up:vector, vec).
-}
-
-function deltaVBurnTime {
-  parameter deltaV.
-  if ship:availableThrust = 0 {
-    return 0.
-  }
-  return abs(deltaV * ship:mass / ship:availableThrust).
-}
-
-function steerToDir {
-  wait until vAng(steering:vector, ship:facing:vector) < 5.
-}
-
-function steerToVec {
-  wait until vAng(steering, ship:facing:vector) < 5.
 }
