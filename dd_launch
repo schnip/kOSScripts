@@ -117,4 +117,5 @@ if rendezvous {
   lock throttle to 0.
   unlock steering.
   unlock throttle.
+  AG1 on.
 }
